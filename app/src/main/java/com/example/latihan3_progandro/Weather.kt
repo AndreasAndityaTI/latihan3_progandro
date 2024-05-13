@@ -1,9 +1,14 @@
 package com.example.latihan3_progandro
 
 data class Weather(
-    val city: String,
-    val temp: String,
-    val description: String,
-    val icon : String
+    val name: String?,
+    val temp: Double?,
+    val description: String?,
+    val icon: String?,
+    val weather: List<WeatherItem>,
+    val main: MainData
+
+
+
 
 )

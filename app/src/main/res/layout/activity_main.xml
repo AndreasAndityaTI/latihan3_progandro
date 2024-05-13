@@ -17,7 +17,7 @@
             android:id="@+id/cityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{weather.city}"
+            android:text="@{weather.name}"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"/>
@@ -29,7 +29,7 @@
             android:layout_below="@id/cityTextView"
             android:layout_marginTop="8dp"
 
-            android:text="@{weather.description}"/>
+            android:text="@{weather.weather[0].description}"/>
 
         <TextView
             android:id="@+id/temperatureTextView"
@@ -37,6 +37,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/descriptionTextView"
             android:layout_marginTop="8dp"
-            android:text="@{String.valueOf(weather.temp)}"/>
+            android:text="@{String.valueOf(weather.main.temp)}"/>
     </RelativeLayout>
 </layout>

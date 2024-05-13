@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val weather = response.body()
                     if (weather != null) {
-                        cityTextView.text = weather.city
-                        descriptionTextView.text = weather.description
-                        temperatureTextView.text = weather.temp
-                        showToast("Success to fetch weather data  ${weather}")
+                        cityTextView.text = weather.name
+                        descriptionTextView.text = weather.weather[0].description
+                        temperatureTextView.text = weather.main.temp.toString()
+                        showToast("Success to fetch weather data")
 
                     }
                 } else {
